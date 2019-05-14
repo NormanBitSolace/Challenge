@@ -20,4 +20,18 @@ extension URL {
         dataTask.resume()
     }
 
+    func getImage(completion: @escaping (UIImage?) -> Void) {
+        let req = URLRequest(url: self)
+        let dataTask = URLSession.shared.dataTask(with: req) { data, _, err in
+            guard let data = data, err == nil else { completion(nil); return }
+            DispatchQueue.main.async {
+                if let image =  UIImage(data: data) {
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
+            }
+        }
+        dataTask.resume()
+    }
 }

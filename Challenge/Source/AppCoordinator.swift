@@ -13,16 +13,11 @@ final class AppCoordinator: NSObject {
 
     func start() {
         navigator.root(type: TodayViewController.self, storyboardName: "Today") { vc in
-            self.dataService.yesterdayNasa { models in
-                // hide loading
-                vc.data = models
-            }
+            // hide loading
 //            vc.delegate = self
-//            vc.title = "Styles"
-//            self.dataService.viewControllerStyleList { models in
-//                vc.data = models
-//            }
+            TodayTableViewModel.build(dataService: self.dataService) { viewModels in
+                print(viewModels)
+            }
         }
-//        navigator.rootNavigationController.setLargeNavigation()
     }
 }

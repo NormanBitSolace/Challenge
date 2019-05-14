@@ -2,7 +2,7 @@ import Foundation
 
 protocol DataService: class {
     func randomQuote(completion: (Quote) -> Void)
-    func yesterdayNasa(completion: @escaping ([Nasa]?) -> Void)
+    func yesterdayNasa(completion: @escaping ([NasaModel]?) -> Void)
 }
 
 class DataServiceImpl: DataService {
@@ -12,10 +12,10 @@ class DataServiceImpl: DataService {
         completion(quote)
     }
 
-    func yesterdayNasa(completion: @escaping ([Nasa]?) -> Void) {
+    func yesterdayNasa(completion: @escaping ([NasaModel]?) -> Void) {
         let dataParam = Date.yesterday.dateString("YYYY-M-d")
         let url = URL("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=\(dataParam)&api_key=DEMO_KEY")
-        url.getModel(type: NasaPhotos.self) { nasaPhotos in
+        url.getModel(type: NasaPhotosModel.self) { nasaPhotos in
             if let nasaPhotos = nasaPhotos {
                 let photos = nasaPhotos.photos
                 completion(Array(photos.prefix(min(2, photos.count))))
