@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sPX-yQ-avY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="uI3-9n-7R7">
+            <objects>
+                <viewController title="Today" id="sPX-yQ-avY" customClass="TodayViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4e-Ak-kct">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liA-QR-90M">
+                                <rect key="frame" x="0.0" y="88" width="414" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="bvi-Lr-UAO"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ais-XL-ux2">
+                                <rect key="frame" x="0.0" y="328" width="414" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="liA-QR-90M" firstAttribute="leading" secondItem="ftY-US-Zgl" secondAttribute="leading" id="D9R-wf-Xrm"/>
+                            <constraint firstItem="Ais-XL-ux2" firstAttribute="top" secondItem="liA-QR-90M" secondAttribute="bottom" id="Ogj-Nb-iWG"/>
+                            <constraint firstItem="Ais-XL-ux2" firstAttribute="trailing" secondItem="ftY-US-Zgl" secondAttribute="trailing" id="XTb-hz-Weq"/>
+                            <constraint firstItem="Ais-XL-ux2" firstAttribute="leading" secondItem="ftY-US-Zgl" secondAttribute="leading" id="epb-wm-WJ9"/>
+                            <constraint firstItem="liA-QR-90M" firstAttribute="top" secondItem="ftY-US-Zgl" secondAttribute="top" id="iQ6-ST-QOz"/>
+                            <constraint firstItem="liA-QR-90M" firstAttribute="trailing" secondItem="ftY-US-Zgl" secondAttribute="trailing" id="vGP-1V-hVv"/>
+                            <constraint firstItem="Ais-XL-ux2" firstAttribute="bottom" secondItem="ftY-US-Zgl" secondAttribute="bottom" id="vma-Sh-2dz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ftY-US-Zgl"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsD-R2-9bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="65.625"/>
+        </scene>
+    </scenes>
+</document>
