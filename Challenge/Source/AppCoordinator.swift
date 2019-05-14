@@ -13,6 +13,10 @@ final class AppCoordinator: NSObject {
 
     func start() {
         navigator.root(type: TodayViewController.self, storyboardName: "Today") { vc in
+            self.dataService.yesterdayNasa { models in
+                // hide loading
+                vc.data = models
+            }
 //            vc.delegate = self
 //            vc.title = "Styles"
 //            self.dataService.viewControllerStyleList { models in
