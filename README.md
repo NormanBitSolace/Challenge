@@ -7,6 +7,7 @@ Start time: 9:58
 1. Create data sources and reason about model. 1.5 hour Start time: 10:33
 1. Create view model. 1 hour Start time: 11:30
 1. Create UI to display. 1 hour Start time: 12:32
-1. Polish. 1 hour
+
+Finish time: 1:58
 
 > Prioritize work with architectural concerns most  important and UI least. This will foster substantive discussions with the team.
