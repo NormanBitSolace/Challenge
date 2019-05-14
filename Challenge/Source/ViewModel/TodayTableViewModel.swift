@@ -4,6 +4,11 @@ struct TodayTableViewModel {
     let sections: [TodayTableSectionViewModel]
 }
 
+struct TodayTableSectionViewModel {
+    let title: String
+    let cellData: [TodayTableCellViewModel]
+}
+
 struct TodayTableCellViewModel {
     let identifier: String
     let name: String
@@ -17,11 +22,6 @@ extension TodayTableCellViewModel {
         self.image = image
         self.name = name
     }
-}
-
-struct TodayTableSectionViewModel {
-    let title: String
-    let cellData: [TodayTableCellViewModel]
 }
 
 extension TodayTableViewModel {

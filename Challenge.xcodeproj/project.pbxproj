@@ -23,6 +23,9 @@
 		942840DC228B3839002F88F7 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840DB228B3839002F88F7 /* Data+Extensions.swift */; };
 		942840DE228B3B9C002F88F7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840DD228B3B9C002F88F7 /* Date+Extensions.swift */; };
 		942840E1228B4399002F88F7 /* TodayTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840E0228B4399002F88F7 /* TodayTableViewModel.swift */; };
+		942840E3228B5309002F88F7 /* NasaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840E2228B5309002F88F7 /* NasaCell.swift */; };
+		942840E5228B5B98002F88F7 /* TodayCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840E4228B5B98002F88F7 /* TodayCalendarViewModel.swift */; };
+		942840E9228B5EB1002F88F7 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942840E8228B5EB1002F88F7 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		942840DB228B3839002F88F7 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		942840DD228B3B9C002F88F7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		942840E0228B4399002F88F7 /* TodayTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewModel.swift; sourceTree = "<group>"; };
+		942840E2228B5309002F88F7 /* NasaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCell.swift; sourceTree = "<group>"; };
+		942840E4228B5B98002F88F7 /* TodayCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCalendarViewModel.swift; sourceTree = "<group>"; };
+		942840E8228B5EB1002F88F7 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		94C855FD2289D99000A22393 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,8 +108,10 @@
 		942840C3228B2C79002F88F7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				942840CD228B2D85002F88F7 /* TodayViewController.swift */,
+				942840E8228B5EB1002F88F7 /* ImageViewController.swift */,
+				942840E2228B5309002F88F7 /* NasaCell.swift */,
 				942840CF228B2DA1002F88F7 /* Today.storyboard */,
+				942840CD228B2D85002F88F7 /* TodayViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				942840E0228B4399002F88F7 /* TodayTableViewModel.swift */,
+				942840E4228B5B98002F88F7 /* TodayCalendarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,14 +244,17 @@
 			files = (
 				942840D8228B35BC002F88F7 /* NasaModel.swift in Sources */,
 				942840DE228B3B9C002F88F7 /* Date+Extensions.swift in Sources */,
+				942840E5228B5B98002F88F7 /* TodayCalendarViewModel.swift in Sources */,
 				942840CC228B2C79002F88F7 /* Quote.swift in Sources */,
 				942840CB228B2C79002F88F7 /* DataService.swift in Sources */,
 				942840D6228B2EEC002F88F7 /* UIViewController+extensions.swift in Sources */,
 				942840DA228B37E1002F88F7 /* URL+Extensions.swift in Sources */,
+				942840E9228B5EB1002F88F7 /* ImageViewController.swift in Sources */,
 				942840CE228B2D85002F88F7 /* TodayViewController.swift in Sources */,
 				942840CA228B2C79002F88F7 /* AppDelegate.swift in Sources */,
 				942840C9228B2C79002F88F7 /* AppCoordinator.swift in Sources */,
 				942840E1228B4399002F88F7 /* TodayTableViewModel.swift in Sources */,
+				942840E3228B5309002F88F7 /* NasaCell.swift in Sources */,
 				942840D3228B2EA4002F88F7 /* Navigator.swift in Sources */,
 				942840DC228B3839002F88F7 /* Data+Extensions.swift in Sources */,
 			);

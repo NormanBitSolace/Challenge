@@ -13,11 +13,23 @@ final class AppCoordinator: NSObject {
 
     func start() {
         navigator.root(type: TodayViewController.self, storyboardName: "Today") { vc in
-            // hide loading
-//            vc.delegate = self
+            vc.delegate = self
+            vc.calendarData = TodayCalendarViewModel.build()
             TodayTableViewModel.build(dataService: self.dataService) { viewModels in
-                print(viewModels)
+                vc.loadingView.stopAnimating()
+                vc.data = viewModels
+//                print(viewModels)
             }
+        }
+    }
+}
+
+extension AppCoordinator: TodayViewControllerDelegate {
+    func handleTap(_ model: TodayTableCellViewModel) {
+        navigator.push() { vc in
+            let imageView = UIImageView(frame: vc.view.bounds)
+            imageView.image = model.image
+            vc.view.addSubview(imageView)
         }
     }
 }

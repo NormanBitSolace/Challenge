@@ -18,7 +18,7 @@ class DataServiceImpl: DataService {
         url.getModel(type: NasaPhotosModel.self) { nasaPhotos in
             if let nasaPhotos = nasaPhotos {
                 let photos = nasaPhotos.photos
-                completion(Array(photos.prefix(min(2, photos.count))))
+                completion([photos.first!, photos.last!])
             }
         }
     }
